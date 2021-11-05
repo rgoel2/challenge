@@ -2,10 +2,11 @@
 const express = require('express');
 const app = express();
 const registerRoutes = require('./routes');
-
 // server config
 const port = process.env.PORT || 3000;
 
+// using static public folder.
+app.use(express.static('public'));
 // register routes
 registerRoutes(app);
 
